@@ -1,0 +1,8 @@
+# OS files
+Thumbs.db
+.DS_Store
+*.tmp
+
+# Node / Temp
+node_modules/
+.env
