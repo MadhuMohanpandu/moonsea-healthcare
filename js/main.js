@@ -1,42 +1,54 @@
 /* ==========================================================================
-   MOONSEA PRIVATE LIMITED (moonsea.in)
-   Master JavaScript
+   MOONSEA ENTERPRISES PRIVATE LIMITED
+   Master JavaScript Interactivity
    ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', function () {
-  initContactForm();
-  initNavbarScroll();
+document.addEventListener('DOMContentLoaded', () => {
+  initMobileNav();
+  initForms();
 });
 
-function initNavbarScroll() {
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 50) {
-        navbar.classList.add('shadow');
-      } else {
-        navbar.classList.remove('shadow');
+function initMobileNav() {
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = hamburger.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
       }
     });
   }
 }
 
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function (e) {
+function initForms() {
+  const forms = document.querySelectorAll('form');
+
+  forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      const name = document.getElementById('name') ? document.getElementById('name').value : '';
-      const email = document.getElementById('email') ? document.getElementById('email').value : '';
-      const message = document.getElementById('message') ? document.getElementById('message').value : '';
+      const requiredInputs = form.querySelectorAll('[required]');
+      let valid = true;
 
-      if (name && email && message) {
-        alert('Thank you for contacting Moonsea Private Limited (moonsea.in)! We will get back to you shortly.');
+      requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+          valid = false;
+          input.style.borderColor = '#ef4444';
+        } else {
+          input.style.borderColor = '#e0f2fe';
+        }
+      });
+
+      if (valid) {
+        alert('Thank you! Your request has been received by MOONSEA ENTERPRISES PRIVATE LIMITED.');
         form.reset();
       } else {
         alert('Please fill out all required fields.');
       }
     });
-  }
+  });
 }
