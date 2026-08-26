@@ -1,54 +1,31 @@
 /* ==========================================================================
    MOONSEA ENTERPRISES PRIVATE LIMITED
-   Master JavaScript Interactivity
+   Exact sureshhealthcare.com Clone JavaScript
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initMobileNav();
-  initForms();
+  initMobileMenu();
+  initFormHandlers();
 });
 
-function initMobileNav() {
-  const hamburger = document.querySelector('.hamburger');
-  const mobileNav = document.querySelector('.mobile-nav');
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const menu = document.getElementById('mobileMenuDrawer');
 
-  if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', () => {
-      mobileNav.classList.toggle('active');
-      const icon = hamburger.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
-      }
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
     });
   }
 }
 
-function initForms() {
+function initFormHandlers() {
   const forms = document.querySelectorAll('form');
-
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      const requiredInputs = form.querySelectorAll('[required]');
-      let valid = true;
-
-      requiredInputs.forEach(input => {
-        if (!input.value.trim()) {
-          valid = false;
-          input.style.borderColor = '#ef4444';
-        } else {
-          input.style.borderColor = '#e0f2fe';
-        }
-      });
-
-      if (valid) {
-        alert('Thank you! Your request has been received by MOONSEA ENTERPRISES PRIVATE LIMITED.');
-        form.reset();
-      } else {
-        alert('Please fill out all required fields.');
-      }
+      alert('Thank you! Your submission has been received by MOONSEA ENTERPRISES PRIVATE LIMITED.');
+      form.reset();
     });
   });
 }

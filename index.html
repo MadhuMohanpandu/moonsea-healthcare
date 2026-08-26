@@ -1,255 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MOONSEA ENTERPRISES PRIVATE LIMITED | Pharmaceuticals & Medical Goods Retail</title>
-  <meta name="description" content="MOONSEA ENTERPRISES PRIVATE LIMITED (CIN: U47721AP2024PTC116151) - Retail sale of pharmaceuticals, medical and orthopaedic goods, and toilet articles in Nellore, Andhra Pradesh.">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>MOONSEA ENTERPRISES PRIVATE LIMITED</title>
+  <meta name="description" content="Integrated healthcare ecosystem across pharmaceutical distribution, private label manufacturing, diagnostics, telemedicine, and digital healthcare services."/>
+  
+  <!-- Tailwind CSS CDN + Custom Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              500: '#38bdf8',
+              600: '#0ea5e9',
+              700: '#0284c7',
+              800: '#0369a1',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- FontAwesome & CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
-<body>
+<body class="antialiased bg-slate-50 text-slate-700">
 
-  <!-- ================= STICKY HEADER ================= -->
-  <header class="sticky-header">
-    <div class="container header-flex">
-      <a href="index.html" class="brand-logo">
-        <div class="brand-title">
-          MOONSEA
-          <span class="brand-badge">Pvt. Ltd.</span>
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-40 border-b border-brand-100 bg-white/85 backdrop-blur-md">
+    <div class="mx-auto flex max-w-[92rem] items-center justify-between gap-1.5 px-3 py-2 md:px-4 md:py-3">
+      <!-- Top Left Brand Title -->
+      <a class="flex items-center gap-2 text-decoration-none" href="index.html">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl font-extrabold tracking-tight text-brand-900 md:text-3xl">MOONSEA</span>
+          <span class="rounded-full bg-brand-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-700 border border-brand-200">ENT. PVT. LTD.</span>
         </div>
       </a>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="corporate-info.html" class="nav-link">Company Info</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li>
-            <a href="franchise.html" class="franchise-cta">
-              Franchise <span class="sub-badge">Apply Now</span>
-            </a>
-          </li>
-        </ul>
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-5 text-sm font-medium text-slate-700 md:flex">
+        <a class="transition hover:text-brand-600 font-semibold text-brand-700" href="index.html">Home</a>
+        <a class="transition hover:text-brand-600" href="about.html">About</a>
+        <a class="transition hover:text-brand-600" href="services.html">Services</a>
+        <a class="franchise-cta inline-flex items-center gap-1.5 rounded-full bg-brand-700 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-sm ring-1 ring-brand-500/70 transition hover:bg-brand-800" href="franchise.html">
+          Franchise <span class="rounded-full bg-white/20 px-1.5 py-0.5 text-[10px] font-bold tracking-[0.08em] text-white">Apply Now</span>
+        </a>
+        <a class="transition hover:text-brand-600" href="surecure.html">SURECURE</a>
+        <a class="transition hover:text-brand-600" href="why-choose-us.html">Why Us</a>
+        <a class="transition hover:text-brand-600" href="contact.html">Contact</a>
       </nav>
 
-      <button class="hamburger" aria-label="Toggle Navigation Menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <!-- Mobile CTA -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a class="franchise-cta inline-flex items-center gap-1.5 rounded-md bg-brand-700 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-sm" href="franchise.html">
+          Franchise <span class="rounded-full bg-white/20 px-1.5 py-0.5 text-[10px] font-bold text-white">Apply</span>
+        </a>
+        <a class="rounded-md border border-brand-200 bg-white px-3 py-2 text-xs font-semibold uppercase tracking-wide text-brand-700" href="contact.html">Contact</a>
+      </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div class="mobile-nav">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="corporate-info.html" class="nav-link">Company Info</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="franchise.html" class="franchise-cta" style="justify-content:center;">Franchise Apply Now</a>
-    </div>
+    <!-- Mobile Horizontal Nav -->
+    <nav class="mx-auto flex w-full max-w-[92rem] items-center gap-2 overflow-x-auto px-3 pb-2 md:hidden">
+      <a class="whitespace-nowrap rounded-full border border-brand-200 bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-brand-700" href="about.html">About</a>
+      <a class="whitespace-nowrap rounded-full border border-brand-200 bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-brand-700" href="services.html">Services</a>
+      <a class="whitespace-nowrap rounded-full border border-brand-200 bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-brand-700" href="surecure.html">SURECURE</a>
+      <a class="whitespace-nowrap rounded-full border border-brand-200 bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-brand-700" href="why-choose-us.html">Why Us</a>
+    </nav>
   </header>
 
-  <main class="container">
-    
-    <!-- ================= HERO GRID ================= -->
-    <section class="hero-grid">
-      <span class="hero-pill">
-        <i class="fa-solid fa-pills"></i> Retail Trade of Pharmaceuticals & Medical Goods
-      </span>
-      <h1>Building the Future of Retail & Healthcare Supply</h1>
-      <p>
-        <strong>MOONSEA ENTERPRISES PRIVATE LIMITED</strong> is an active private healthcare trade company incorporated on 27 Sep 2024 (CIN: U47721AP2024PTC116151), engaged in the retail sale of pharmaceuticals, medical appliances, orthopaedic goods, and toilet articles.
-      </p>
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="mx-auto max-w-[100rem] px-4 py-8 md:px-6 md:py-12">
+    <div class="space-y-14 md:space-y-20">
 
-      <div class="hero-buttons">
-        <a href="corporate-info.html" class="btn btn-primary">
-          Explore Company Info <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <a href="franchise.html" class="btn btn-outline">
-          Apply For Franchise <i class="fa-solid fa-store"></i>
-        </a>
-      </div>
-    </section>
+      <!-- Hero Section -->
+      <section class="hero-grid relative overflow-visible rounded-3xl border border-brand-100 bg-white/80 p-8 md:p-12">
+        <div class="absolute -right-14 -top-14 h-48 w-48 rounded-full bg-brand-100 blur-2xl"></div>
+        <div class="relative w-full space-y-6">
+          <p class="inline-flex rounded-full border border-brand-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">
+            Integrated Healthcare Ecosystem
+          </p>
+          <h1 class="max-w-4xl text-4xl font-bold leading-tight text-brand-900 md:text-6xl">
+            Building the Future of Integrated Healthcare
+          </h1>
+          <div class="max-w-4xl space-y-4">
+            <p class="text-lg leading-relaxed text-slate-700 md:text-xl">
+              MOONSEA ENTERPRISES PRIVATE LIMITED (CIN: U47721AP2024PTC116151) is a leading pharmaceutical distribution, medical goods, and healthcare solutions company committed to creating a complete healthcare ecosystem across India.
+            </p>
+            <p class="text-base leading-relaxed text-slate-700 md:text-lg">
+              From pharmaceutical distribution and private label manufacturing to retail sale of pharmaceuticals, medical & orthopaedic goods, toilet articles, e-pharmacy, diagnostics, telemedicine, and integrated healthcare centers, we are transforming the way healthcare reaches patients.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a class="rounded-md bg-brand-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-800" href="services.html">Explore Our Services</a>
+            <a class="rounded-md border border-brand-200 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition hover:border-brand-400" href="surecure.html">Discover SURECURE</a>
+          </div>
+        </div>
+      </section>
 
-    <!-- ================= STATS SECTION ================= -->
-    <section class="stats-grid">
-      <div class="glass-card">
-        <div class="stat-num">U47721AP</div>
-        <p class="stat-desc">Corporate Identification Number (CIN: U47721AP2024PTC116151)</p>
-      </div>
-
-      <div class="glass-card">
-        <div class="stat-num">Active</div>
-        <p class="stat-desc">RoC Vijayawada Registered Company Status</p>
-      </div>
-
-      <div class="glass-card">
-        <div class="stat-num">₹5,00,000</div>
-        <p class="stat-desc">Authorized & Paid-Up Share Capital</p>
-      </div>
-    </section>
-
-    <!-- ================= CORE OFFERINGS ================= -->
-    <section>
-      <h2 class="section-title">What We Deliver</h2>
-      <p class="section-desc">
-        We serve retail consumers, healthcare institutions, and local communities with reliability, quality products, and trusted pharmaceutical supply.
-      </p>
-
-      <div class="grid-3">
-        <!-- Card 1 -->
-        <article class="glass-card offering-card">
-          <h3>Pharmaceutical Retail</h3>
-          <ul class="bullet-list">
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Wide range of quality prescription & OTC medicines</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Personal care, hygiene, and toilet articles supply</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Verified pharmaceutical distribution sourcing</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Local retail counter & institutional supply</span>
-            </li>
-          </ul>
+      <!-- Key Metrics Section -->
+      <section class="grid gap-4 md:grid-cols-3">
+        <article class="glass-card rounded-2xl p-6">
+          <p class="text-3xl font-bold text-brand-700">250+</p>
+          <p class="mt-2 text-sm text-slate-600">Pharmaceutical company partnerships</p>
         </article>
-
-        <!-- Card 2 -->
-        <article class="glass-card offering-card">
-          <h3>Medical & Orthopaedic Goods</h3>
-          <ul class="bullet-list">
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Orthopaedic braces, knee supports, & mobility aids</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Medical dispopables & surgical support products</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Rehabilitation & medical aids for daily care</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>High quality standards with customer care</span>
-            </li>
-          </ul>
+        <article class="glass-card rounded-2xl p-6">
+          <p class="text-3xl font-bold text-brand-700">Pan-India</p>
+          <p class="mt-2 text-sm text-slate-600">Healthcare ecosystem ambition</p>
         </article>
-
-        <!-- Card 3 -->
-        <article class="glass-card offering-card">
-          <h3>Digital & Retail Care</h3>
-          <ul class="bullet-list">
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Convenient doorstep delivery & customer care</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Prescription handling & retail order fulfillment</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Health records & order status support</span>
-            </li>
-            <li>
-              <span class="bullet-dot"></span>
-              <span>Accessible healthcare products in Nellore</span>
-            </li>
-          </ul>
+        <article class="glass-card rounded-2xl p-6">
+          <p class="text-3xl font-bold text-brand-700">1 Platform</p>
+          <p class="mt-2 text-sm text-slate-600">Distribution + digital care integration</p>
         </article>
-      </div>
-    </section>
+      </section>
 
-    <!-- ================= CORPORATE STATUTORY CARD ================= -->
-    <section class="dark-card">
-      <span class="hero-pill" style="background:rgba(255,255,255,0.1); color:#bae6fd; border-color:rgba(255,255,255,0.2);">
-        Company Profile & Registration Details
-      </span>
-      <h2>MOONSEA ENTERPRISES PRIVATE LIMITED</h2>
+      <!-- What We Deliver Grid -->
+      <section class="space-y-6">
+        <h2 class="text-3xl font-bold text-brand-900 md:text-4xl">What We Deliver</h2>
+        <p class="max-w-3xl text-slate-700">With strong relationships across more than 250 pharmaceutical companies, we serve hospitals, pharmacies, healthcare institutions, and consumers with reliability, efficiency, and innovation.</p>
+        
+        <div class="grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
+          <!-- Card 1: Distribution -->
+          <article class="glass-card rounded-2xl p-6">
+            <h3 class="text-lg font-bold uppercase tracking-[0.08em] text-brand-900">Distribution</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Strong network with 250+ pharmaceutical companies</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Pan-India distribution network</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Timely supply to pharmacies, hospitals & institutions</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Government & institutional supply</span></li>
+            </ul>
+          </article>
 
-      <div class="corporate-grid">
-        <div class="corp-info-box">
-          <label>CIN</label>
-          <p>U47721AP2024PTC116151</p>
+          <!-- Card 2: Manufacturing -->
+          <article class="glass-card rounded-2xl p-6">
+            <h3 class="text-lg font-bold uppercase tracking-[0.08em] text-brand-900">Manufacturing</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>WHO-GMP compliant facilities</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Wide range of quality medicines & orthopaedic goods</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Private Label & Branded Formulations</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Nutraceuticals & Specialty Toiletries</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Innovation with quality & care</span></li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Digital Care -->
+          <article class="glass-card rounded-2xl p-6">
+            <h3 class="text-lg font-bold uppercase tracking-[0.08em] text-brand-900">Digital Care</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>E-Pharmacy with doorstep delivery</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Teleconsultation with expert doctors</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Prescription upload & management</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Health records at your fingertips</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Care anytime, anywhere</span></li>
+            </ul>
+          </article>
+
+          <!-- Card 4: Integrated Healthcare Centers -->
+          <article class="glass-card rounded-2xl p-6">
+            <h3 class="text-lg font-bold uppercase tracking-[0.08em] text-brand-900">Integrated Healthcare Centers</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Multi-specialty OPD & clinics</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Diagnostic services & labs</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Pharmacy & wellness products</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Preventive healthcare programs</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"></span><span>Accessible & affordable care</span></li>
+            </ul>
+          </article>
         </div>
+      </section>
 
-        <div class="corp-info-box">
-          <label>Incorporation Date</label>
-          <p>27 September 2024</p>
-        </div>
+      <!-- Why Choose Us Dark Banner -->
+      <section class="rounded-3xl border border-brand-100 bg-brand-900 p-8 text-white md:p-10">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">Why Choose Us</p>
+        <h2 class="mt-3 text-3xl font-bold text-white md:text-4xl">Trusted Healthcare. Nationwide Reach. Sustainable Growth.</h2>
+        <ul class="mt-6 grid gap-3 md:grid-cols-2">
+          <li class="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm leading-relaxed text-brand-50">Strong distribution network with direct partnerships</li>
+          <li class="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm leading-relaxed text-brand-50">Healthcare expertise across pharma and integrated services</li>
+          <li class="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm leading-relaxed text-brand-50">Technology-driven e-pharmacy and telemedicine enablement</li>
+          <li class="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm leading-relaxed text-brand-50">Scalable growth strategy across South India and beyond</li>
+          <li class="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm leading-relaxed text-brand-50">Patient-centric focus on accessibility, affordability, and quality</li>
+        </ul>
+      </section>
 
-        <div class="corp-info-box">
-          <label>Registrar of Companies</label>
-          <p>RoC - Vijayawada (Reg. No: 116151)</p>
-        </div>
+      <!-- SURECURE Lifesciences Card -->
+      <section class="rounded-2xl border border-brand-100 bg-white p-8 text-center shadow-sm">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">SURECURE Lifesciences</p>
+        <h2 class="mt-2 text-3xl font-bold text-brand-900">Trusted Care. Assured Cure.</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-slate-700">SURECURE Lifesciences represents our vision to create a nationally recognized healthcare brand focused on quality, affordability, and patient trust.</p>
+      </section>
 
-        <div class="corp-info-box">
-          <label>Company Category & Status</label>
-          <p>Private Non-Government (Active)</p>
-        </div>
-
-        <div class="corp-info-box">
-          <label>Authorized Share Capital</label>
-          <p>₹5,00,000.00</p>
-        </div>
-
-        <div class="corp-info-box">
-          <label>Paid-Up Capital</label>
-          <p>₹5,00,000.00</p>
-        </div>
-      </div>
-
-      <div style="margin-top:1.5rem; background:rgba(255,255,255,0.06); padding:1.25rem; border-radius:0.75rem; border:1px solid rgba(255,255,255,0.12);">
-        <label style="font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; color:#bae6fd; display:block; margin-bottom:0.25rem;">Registered Office Address</label>
-        <p style="margin:0; font-size:0.95rem; color:#ffffff;">
-          H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, Nellore, Andhra Pradesh - 524003, India.
-        </p>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>MOONSEA ENTERPRISES PRIVATE LIMITED</h4>
-          <p style="margin-bottom:0.75rem;">Retail sale of pharmaceuticals, medical and orthopaedic goods, and toilet articles.</p>
-          <p style="font-size:0.8rem; color:var(--slate-500);">
-            Registered Address: H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, AP 524003, India.
-          </p>
-        </div>
-
-        <div>
-          <h4>Quick Links</h4>
-          <p><a href="index.html">Home</a></p>
-          <p><a href="about.html">About Us</a></p>
-          <p><a href="corporate-info.html">Company Info</a></p>
-          <p><a href="contact.html">Contact Us</a></p>
-        </div>
-
-        <div>
-          <h4>Franchise & Retail</h4>
-          <p><a href="franchise.html">Franchise Application</a></p>
-          <p><a href="corporate-info.html">RoC Registration (Vijayawada)</a></p>
-          <p><a href="contact.html">Customer Care</a></p>
-        </div>
+  <footer class="mt-20 border-t border-brand-100 bg-white/90">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 text-sm text-slate-600 md:grid-cols-3 md:px-6">
+      <div class="space-y-2">
+        <p class="text-base font-bold text-slate-900">MOONSEA ENTERPRISES PRIVATE LIMITED</p>
+        <p class="text-xs font-semibold text-brand-700">CIN: U47721AP2024PTC116151 | Reg. RoC Vijayawada</p>
+        <p>Delivering Healthcare. Building Trust. Creating the Future of Integrated Healthcare.</p>
+        <p class="text-xs leading-relaxed text-slate-500">Registered Office: H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, Nellore, Andhra Pradesh, 524003-India</p>
+        <a href="https://maps.google.com/?q=Sodhan+Nagar,+Nellore,+Andhra+Pradesh" target="_blank" rel="noreferrer" class="inline-flex text-xs font-semibold text-brand-700 hover:text-brand-600">View Location Map</a>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 MOONSEA ENTERPRISES PRIVATE LIMITED (CIN: U47721AP2024PTC116151). All rights reserved.</p>
+      <div class="space-y-2">
+        <p class="font-semibold text-slate-900">Core Capabilities</p>
+        <p>Pharmaceutical Distribution</p>
+        <p>Private Label Manufacturing</p>
+        <p>E-Pharmacy & Medical Orthopaedic Goods</p>
       </div>
+
+      <div class="space-y-2">
+        <p class="font-semibold text-slate-900">SURECURE Lifesciences</p>
+        <p>Trusted Care. Assured Cure.</p>
+        <p class="text-xs uppercase tracking-widest text-brand-600">Nationwide Reach. Sustainable Growth.</p>
+      </div>
+    </div>
+    
+    <div class="border-t border-brand-100 py-4 text-center text-xs text-slate-500">
+      <p>&copy; 2026 MOONSEA ENTERPRISES PRIVATE LIMITED. All rights reserved.</p>
     </div>
   </footer>
 
