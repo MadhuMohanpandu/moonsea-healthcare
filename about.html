@@ -6,132 +6,126 @@
   <title>About Us | MOONSEA ENTERPRISES PRIVATE LIMITED</title>
   <meta name="description" content="Learn about MOONSEA ENTERPRISES PRIVATE LIMITED (CIN: U47721AP2024PTC116151), our leadership, healthcare ecosystem ambition, and pharmaceutical distribution."/>
   
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              500: '#38bdf8',
-              600: '#0ea5e9',
-              700: '#0284c7',
-              800: '#0369a1',
-              900: '#0f172a',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
-<body class="antialiased bg-slate-50 text-slate-700">
+<body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="sticky top-0 z-40 border-b border-brand-100 bg-white/85 backdrop-blur-md">
-    <div class="mx-auto flex max-w-[92rem] items-center justify-between gap-1.5 px-3 py-2 md:px-4 md:py-3">
-      <a class="flex items-center gap-2 text-decoration-none" href="index.html">
-        <div class="flex items-center gap-2">
-          <span class="text-2xl font-extrabold tracking-tight text-brand-900 md:text-3xl">MOONSEA</span>
-          <span class="rounded-full bg-brand-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-700 border border-brand-200">ENT. PVT. LTD.</span>
+  <!-- ================= STICKY HEADER ================= -->
+  <header class="sticky-header">
+    <div class="container header-flex">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-title">
+          MOONSEA
+          <span class="brand-badge">ENT. PVT. LTD.</span>
         </div>
       </a>
 
-      <nav class="hidden items-center gap-5 text-sm font-medium text-slate-700 md:flex">
-        <a class="transition hover:text-brand-600" href="index.html">Home</a>
-        <a class="transition hover:text-brand-600 font-semibold text-brand-700" href="about.html">About</a>
-        <a class="transition hover:text-brand-600" href="services.html">Services</a>
-        <a class="franchise-cta inline-flex items-center gap-1.5 rounded-full bg-brand-700 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-sm ring-1 ring-brand-500/70 transition hover:bg-brand-800" href="franchise.html">
-          Franchise <span class="rounded-full bg-white/20 px-1.5 py-0.5 text-[10px] font-bold tracking-[0.08em] text-white">Apply Now</span>
-        </a>
-        <a class="transition hover:text-brand-600" href="surecure.html">SURECURE</a>
-        <a class="transition hover:text-brand-600" href="why-choose-us.html">Why Us</a>
-        <a class="transition hover:text-brand-600" href="contact.html">Contact</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li>
+            <a href="franchise.html" class="franchise-cta">
+              Franchise <span class="sub-badge">Apply Now</span>
+            </a>
+          </li>
+          <li><a href="surecure.html" class="nav-link">SURECURE</a></li>
+          <li><a href="why-choose-us.html" class="nav-link">Why Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
 
-      <div class="flex items-center gap-2 md:hidden">
-        <a class="franchise-cta inline-flex items-center gap-1.5 rounded-md bg-brand-700 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-sm" href="franchise.html">Franchise <span class="rounded-full bg-white/20 px-1.5 py-0.5 text-[10px] font-bold text-white">Apply</span></a>
-        <a class="rounded-md border border-brand-200 bg-white px-3 py-2 text-xs font-semibold uppercase tracking-wide text-brand-700" href="contact.html">Contact</a>
-      </div>
+      <button class="hamburger" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileMenuDrawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="franchise.html" class="franchise-cta" style="justify-content:center;">Franchise Apply Now</a>
+      <a href="surecure.html" class="nav-link">SURECURE</a>
+      <a href="why-choose-us.html" class="nav-link">Why Us</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </div>
   </header>
 
   <!-- ================= MAIN CONTENT ================= -->
-  <main class="mx-auto max-w-[100rem] px-4 py-8 md:px-6 md:py-12">
-    <div class="space-y-12">
+  <main class="container">
+    <section class="hero-grid">
+      <span class="hero-pill"><i class="fa-solid fa-circle-info"></i> About Our Company</span>
+      <h1>Committed to Excellence in Healthcare & Pharmaceuticals</h1>
+      <p>
+        <strong>MOONSEA ENTERPRISES PRIVATE LIMITED</strong> (CIN: U47721AP2024PTC116151) is a registered private healthcare company incorporated on 27 Sep 2024 with RoC Vijayawada, authorized and paid-up capital of ₹5,00,000.
+      </p>
+      <p style="font-size: 1rem; color: #475569;">
+        Headquartered in Sodhan Nagar, Nellore, Andhra Pradesh, we focus on retail sale of pharmaceuticals, medical and orthopaedic goods, toilet articles, and integrated digital healthcare.
+      </p>
+    </section>
 
-      <section class="hero-grid relative overflow-visible rounded-3xl border border-brand-100 bg-white/80 p-8 md:p-12">
-        <p class="inline-flex rounded-full border border-brand-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">About Our Company</p>
-        <h1 class="mt-4 text-4xl font-bold leading-tight text-brand-900 md:text-5xl">Committed to Excellence in Healthcare & Pharmaceuticals</h1>
-        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
-          MOONSEA ENTERPRISES PRIVATE LIMITED (CIN: U47721AP2024PTC116151) is a registered private healthcare company incorporated on 27 Sep 2024 with RoC Vijayawada, authorized and paid-up capital of ₹5,00,000.
-        </p>
-        <p class="mt-2 max-w-3xl text-base leading-relaxed text-slate-700">
-          Headquartered in Sodhan Nagar, Nellore, Andhra Pradesh, we focus on retail sale of pharmaceuticals, medical and orthopaedic goods, toilet articles, and integrated digital healthcare.
-        </p>
-      </section>
-
-      <!-- Statutory Master Profile -->
-      <section class="rounded-2xl border border-brand-100 bg-white p-8 shadow-sm">
-        <h2 class="text-2xl font-bold text-brand-900 mb-6">Corporate Master Registration Details</h2>
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <div class="rounded-xl border border-brand-100 bg-brand-50/50 p-4">
-            <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">Company Name</span>
-            <p class="mt-1 font-bold text-slate-900">MOONSEA ENTERPRISES PRIVATE LIMITED</p>
-          </div>
-          <div class="rounded-xl border border-brand-100 bg-brand-50/50 p-4">
-            <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">CIN</span>
-            <p class="mt-1 font-bold text-slate-900">U47721AP2024PTC116151</p>
-          </div>
-          <div class="rounded-xl border border-brand-100 bg-brand-50/50 p-4">
-            <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">Incorporation Date</span>
-            <p class="mt-1 font-bold text-slate-900">27 September 2024</p>
-          </div>
-          <div class="rounded-xl border border-brand-100 bg-brand-50/50 p-4">
-            <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">RoC Office</span>
-            <p class="mt-1 font-bold text-slate-900">RoC - Vijayawada (Reg. 116151)</p>
-          </div>
-          <div class="rounded-xl border border-brand-100 bg-brand-50/50 p-4">
-            <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">Share Capital</span>
-            <p class="mt-1 font-bold text-slate-900">₹5,00,000 Authorized / Paid-up</p>
-          </div>
-          <div class="rounded-xl border border-brand-100 bg-brand-50/50 p-4">
-            <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">Company Status</span>
-            <p class="mt-1 font-bold text-emerald-600"><i class="fa-solid fa-circle-check"></i> Active</p>
-          </div>
+    <!-- Statutory Master Profile -->
+    <section class="glass-card" style="padding: 2.5rem; margin-bottom: 3.5rem;">
+      <h2 style="font-size: 1.75rem; color: #0f172a; margin-bottom: 1.5rem;">Corporate Master Registration Details</h2>
+      <div class="stats-grid">
+        <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #bae6fd;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #0284c7;">Company Name</span>
+          <p style="font-weight: 700; color: #0f172a; margin-top: 0.25rem;">MOONSEA ENTERPRISES PRIVATE LIMITED</p>
         </div>
-        <div class="mt-4 rounded-xl border border-brand-100 bg-slate-50 p-4">
-          <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">Registered Office Address</span>
-          <p class="mt-1 font-medium text-slate-900">H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, Nellore, Andhra Pradesh, 524003-India.</p>
+        <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #bae6fd;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #0284c7;">CIN</span>
+          <p style="font-weight: 700; color: #0f172a; margin-top: 0.25rem;">U47721AP2024PTC116151</p>
         </div>
-      </section>
-
-    </div>
+        <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #bae6fd;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #0284c7;">Incorporation Date</span>
+          <p style="font-weight: 700; color: #0f172a; margin-top: 0.25rem;">27 September 2024</p>
+        </div>
+        <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #bae6fd;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #0284c7;">RoC Office</span>
+          <p style="font-weight: 700; color: #0f172a; margin-top: 0.25rem;">RoC - Vijayawada (Reg. 116151)</p>
+        </div>
+        <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #bae6fd;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #0284c7;">Share Capital</span>
+          <p style="font-weight: 700; color: #0f172a; margin-top: 0.25rem;">₹5,00,000 Authorized / Paid-up</p>
+        </div>
+        <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #bae6fd;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #0284c7;">Company Status</span>
+          <p style="font-weight: 700; color: #059669; margin-top: 0.25rem;"><i class="fa-solid fa-circle-check"></i> Active</p>
+        </div>
+      </div>
+      <div style="margin-top: 1.5rem; background: #f8fafc; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #e0f2fe;">
+        <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #0284c7;">Registered Office Address</span>
+        <p style="font-weight: 600; color: #0f172a; margin-top: 0.25rem;">H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, Nellore, Andhra Pradesh, 524003-India.</p>
+      </div>
+    </section>
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="mt-20 border-t border-brand-100 bg-white/90">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 text-sm text-slate-600 md:grid-cols-3 md:px-6">
-      <div class="space-y-2">
-        <p class="text-base font-bold text-slate-900">MOONSEA ENTERPRISES PRIVATE LIMITED</p>
-        <p class="text-xs font-semibold text-brand-700">CIN: U47721AP2024PTC116151</p>
-        <p>H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, Andhra Pradesh, 524003-India</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>MOONSEA ENTERPRISES PRIVATE LIMITED</h4>
+          <p style="font-size: 0.8rem; color: #0284c7; font-weight: 700;">CIN: U47721AP2024PTC116151</p>
+          <p>Registered Address: H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, AP 524003, India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="services.html">Services</a></p>
+          <p><a href="franchise.html">Franchise</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>SURECURE Lifesciences</h4>
+          <p>Trusted Care. Assured Cure.</p>
+        </div>
       </div>
-      <div class="space-y-2">
-        <p class="font-semibold text-slate-900">Quick Links</p>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="services.html">Services</a></p>
-        <p><a href="franchise.html">Franchise</a></p>
-      </div>
-      <div class="space-y-2">
-        <p class="font-semibold text-slate-900">SURECURE Lifesciences</p>
-        <p>Trusted Care. Assured Cure.</p>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MOONSEA ENTERPRISES PRIVATE LIMITED. All rights reserved.</p>
       </div>
     </div>
   </footer>
