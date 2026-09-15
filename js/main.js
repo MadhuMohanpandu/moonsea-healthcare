@@ -41,8 +41,9 @@ function initFormHandler() {
         return;
       }
 
-      // Simulate successful form delivery & feedback
+      // Display refined successful enquiry confirmation
       if (successAlert) {
+        successAlert.innerHTML = '<i class="fa-solid fa-circle-check me-2"></i> Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.';
         successAlert.style.display = 'block';
         if (errorAlert) errorAlert.style.display = 'none';
       }

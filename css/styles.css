@@ -362,7 +362,7 @@ img {
   align-items: center;
   text-align: center;
   gap: 0.75rem;
-  min-width: 150px;
+  min-width: 140px;
   position: relative;
 }
 
@@ -379,6 +379,12 @@ img {
   font-size: 1.6rem;
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
   transition: var(--transition);
+}
+
+.flow-node.moonsea-highlight .flow-node-icon {
+  background: var(--brand-700);
+  color: #ffffff;
+  border-color: var(--brand-500);
 }
 
 .flow-node:hover .flow-node-icon {
@@ -433,6 +439,18 @@ img {
   justify-content: center;
   font-size: 1.15rem;
   margin-bottom: 1rem;
+}
+
+/* ================= DISCLAIMER BOX ================= */
+.disclaimer-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-top: 2rem;
 }
 
 /* ================= FORM CONTROLS & ALERTS ================= */
@@ -547,10 +565,23 @@ img {
   color: #ffffff;
 }
 
+.footer-legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--slate-500);
+}
+
+.footer-legal-links a:hover {
+  text-decoration: underline;
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   border-top: 1px solid var(--brand-100);
   font-size: 0.85rem;
   color: var(--slate-500);
