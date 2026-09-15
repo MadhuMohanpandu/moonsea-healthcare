@@ -1,6 +1,6 @@
 /* ==========================================================================
    MOONSEA ENTERPRISES PRIVATE LIMITED
-   Master CSS - 4-Page Corporate Healthcare Ecosystem Architecture
+   Master CSS - Refined Corporate Healthcare Ecosystem Architecture
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -16,6 +16,7 @@
   --brand-50: #f0f9ff;
   --emerald-600: #059669;
   --emerald-100: #d1fae5;
+  --whatsapp-green: #25D366;
   --slate-900: #0f172a;
   --slate-700: #334155;
   --slate-600: #475569;
@@ -78,7 +79,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--brand-100);
@@ -217,9 +218,17 @@ img {
 .hero-grid h1 {
   font-size: 3.25rem;
   color: var(--brand-900);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -1px;
   line-height: 1.15;
+}
+
+.hero-subtagline {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--brand-700);
+  margin-bottom: 1.25rem;
 }
 
 .hero-grid p {
@@ -274,6 +283,18 @@ img {
   background: var(--brand-50);
 }
 
+.btn-whatsapp {
+  background: var(--whatsapp-green);
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.btn-whatsapp:hover {
+  background: #1eb956;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
 /* ================= CARDS & GRIDS ================= */
 .glass-card {
   background: rgba(255, 255, 255, 0.95);
@@ -319,54 +340,63 @@ img {
   margin-bottom: 3.5rem;
 }
 
-/* ================= ECOSYSTEM FLOW DIAGRAM ================= */
-.ecosystem-flow {
+/* ================= VISUAL ECOSYSTEM FLOW DIAGRAM ================= */
+.ecosystem-flow-visual {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  background: #ffffff;
+  gap: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
   border: 1px solid var(--brand-100);
-  border-radius: 1.25rem;
-  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
   margin-top: 2rem;
   margin-bottom: 3.5rem;
   overflow-x: auto;
   box-shadow: var(--shadow-sm);
 }
 
-.flow-step {
+.flow-node {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.5rem;
-  min-width: 140px;
+  gap: 0.75rem;
+  min-width: 150px;
+  position: relative;
 }
 
-.flow-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--brand-50);
-  border: 1px solid var(--brand-200);
+.flow-node-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 2px solid var(--brand-200);
   color: var(--brand-700);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+  transition: var(--transition);
 }
 
-.flow-label {
+.flow-node:hover .flow-node-icon {
+  border-color: var(--brand-600);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.15);
+}
+
+.flow-node-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--brand-900);
 }
 
-.flow-arrow {
+.flow-connector {
   color: var(--brand-500);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
 }
 
@@ -405,45 +435,7 @@ img {
   margin-bottom: 1rem;
 }
 
-/* ================= WHO WE SERVE TABLE ================= */
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  border-radius: 1rem;
-  border: 1px solid var(--brand-100);
-  background: #ffffff;
-  margin-bottom: 3.5rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.serve-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-.serve-table th {
-  background: var(--brand-50);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--brand-900);
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid var(--brand-100);
-}
-
-.serve-table td {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #f1f5f9;
-  font-size: 0.925rem;
-  color: var(--slate-700);
-}
-
-.serve-table tr:last-child td {
-  border-bottom: none;
-}
-
-/* ================= FORM CONTROLS ================= */
+/* ================= FORM CONTROLS & ALERTS ================= */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -475,6 +467,27 @@ img {
   box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
 }
 
+.alert-banner {
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.925rem;
+  font-weight: 600;
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
 /* ================= FOOTER ================= */
 .site-footer {
   border-top: 1px solid var(--brand-100);
@@ -483,10 +496,10 @@ img {
   margin-top: 4rem;
 }
 
-.footer-grid {
+.footer-5col {
   display: grid;
-  grid-template-columns: 1.5fr repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 2.5rem;
   font-size: 0.9rem;
   color: var(--slate-600);
 }
@@ -502,11 +515,36 @@ img {
 }
 
 .footer-col a {
-  color: var(--brand-700);
+  color: var(--slate-700);
 }
 
 .footer-col a:hover {
+  color: var(--brand-700);
   text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  color: var(--brand-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background: var(--brand-700);
+  color: #ffffff;
 }
 
 .footer-bottom {
@@ -532,7 +570,13 @@ img {
   .hero-grid {
     padding: 2rem 1.5rem;
   }
-  .footer-grid {
+  .footer-5col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-5col {
     grid-template-columns: 1fr;
   }
 }

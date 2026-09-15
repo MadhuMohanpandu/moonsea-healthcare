@@ -1,11 +1,11 @@
 /* ==========================================================================
    MOONSEA ENTERPRISES PRIVATE LIMITED
-   Exact sureshhealthcare.com Clone JavaScript
+   Main JavaScript - Mobile Navigation & Functional Form Handler
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
-  initFormHandlers();
+  initFormHandler();
 });
 
 function initMobileMenu() {
@@ -14,18 +14,43 @@ function initMobileMenu() {
 
   if (toggleBtn && menu) {
     toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+      menu.classList.toggle('active');
     });
   }
 }
 
-function initFormHandlers() {
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
+function initFormHandler() {
+  const contactForm = document.getElementById('contactEnquiryForm');
+  const successAlert = document.getElementById('formSuccessAlert');
+  const errorAlert = document.getElementById('formErrorAlert');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Thank you! Your submission has been received by MOONSEA ENTERPRISES PRIVATE LIMITED.');
-      form.reset();
+
+      const name = contactForm.querySelector('[name="name"]')?.value.trim();
+      const email = contactForm.querySelector('[name="email"]')?.value.trim();
+      const interest = contactForm.querySelector('[name="interest"]')?.value;
+      const message = contactForm.querySelector('[name="message"]')?.value.trim();
+
+      if (!name || !email || !interest || !message) {
+        if (errorAlert) {
+          errorAlert.style.display = 'block';
+          if (successAlert) successAlert.style.display = 'none';
+        }
+        return;
+      }
+
+      // Simulate successful form delivery & feedback
+      if (successAlert) {
+        successAlert.style.display = 'block';
+        if (errorAlert) errorAlert.style.display = 'none';
+      }
+
+      contactForm.reset();
+
+      // Scroll to alert
+      successAlert?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
-  });
+  }
 }
