@@ -1,6 +1,6 @@
 /* ==========================================================================
-   MOONSEA ENTERPRISES PRIVATE LIMITED (CIN: U47721AP2024PTC116151)
-   Complete Master CSS - Replicating sureshhealthcare.com Aesthetics
+   MOONSEA ENTERPRISES PRIVATE LIMITED
+   Master CSS - 4-Page Corporate Healthcare Ecosystem Architecture
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -14,6 +14,8 @@
   --brand-200: #bae6fd;
   --brand-100: #e0f2fe;
   --brand-50: #f0f9ff;
+  --emerald-600: #059669;
+  --emerald-100: #d1fae5;
   --slate-900: #0f172a;
   --slate-700: #334155;
   --slate-600: #475569;
@@ -76,7 +78,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--brand-100);
@@ -98,7 +100,7 @@ img {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 800;
   color: var(--brand-900);
   letter-spacing: -0.5px;
@@ -122,7 +124,7 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 2rem;
   list-style: none;
 }
 
@@ -139,35 +141,26 @@ img {
   color: var(--brand-700);
 }
 
-.franchise-cta {
+.partner-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 1.25rem;
+  padding: 0.6rem 1.35rem;
   border-radius: 9999px;
   background: var(--brand-700);
   color: #ffffff !important;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
-.franchise-cta:hover {
+.partner-cta:hover {
   background: var(--brand-800);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
-}
-
-.sub-badge {
-  background: rgba(255, 255, 255, 0.25);
-  padding: 0.15rem 0.55rem;
-  border-radius: 9999px;
-  font-size: 0.65rem;
 }
 
 .hamburger {
@@ -200,7 +193,7 @@ img {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 249, 255, 0.85) 100%);
   padding: 3.5rem 3rem;
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
 }
@@ -281,21 +274,14 @@ img {
   background: var(--brand-50);
 }
 
-/* ================= METRICS & CARDS ================= */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 3.5rem;
-}
-
+/* ================= CARDS & GRIDS ================= */
 .glass-card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--brand-100);
   border-radius: 1.25rem;
-  padding: 1.75rem;
+  padding: 2rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
@@ -306,20 +292,6 @@ img {
   border-color: var(--brand-200);
 }
 
-.stat-num {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--brand-700);
-  font-family: var(--font-heading);
-}
-
-.stat-desc {
-  font-size: 0.925rem;
-  color: var(--slate-600);
-  margin-top: 0.35rem;
-}
-
-/* ================= SECTION STYLES ================= */
 .section-title {
   font-size: 2.25rem;
   color: var(--brand-900);
@@ -333,13 +305,6 @@ img {
   margin-bottom: 2.5rem;
 }
 
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 3.5rem;
-}
-
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -347,76 +312,167 @@ img {
   margin-bottom: 3.5rem;
 }
 
-.offering-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3.5rem;
 }
 
-.offering-card h3 {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--brand-900);
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--brand-100);
-}
-
-.bullet-list {
-  list-style: none;
+/* ================= ECOSYSTEM FLOW DIAGRAM ================= */
+.ecosystem-flow {
   display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.bullet-list li {
-  display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.75rem;
+  background: #ffffff;
+  border: 1px solid var(--brand-100);
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  min-width: 140px;
+}
+
+.flow-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  color: var(--brand-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.flow-label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--brand-900);
+}
+
+.flow-arrow {
+  color: var(--brand-500);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ================= VALUES 6-CARD GRID ================= */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.value-card {
+  background: #ffffff;
+  border: 1px solid var(--brand-100);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  border-color: var(--brand-200);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.value-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--brand-100);
+  color: var(--brand-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+/* ================= WHO WE SERVE TABLE ================= */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--brand-100);
+  background: #ffffff;
+  margin-bottom: 3.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.serve-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.serve-table th {
+  background: var(--brand-50);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--brand-900);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--brand-100);
+}
+
+.serve-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
   font-size: 0.925rem;
   color: var(--slate-700);
 }
 
-.bullet-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--brand-700);
-  margin-top: 0.45rem;
-  flex-shrink: 0;
+.serve-table tr:last-child td {
+  border-bottom: none;
 }
 
-/* ================= DARK BANNER ================= */
-.dark-card {
-  border-radius: 1.75rem;
-  border: 1px solid var(--brand-100);
-  background: var(--brand-900);
-  color: #ffffff;
-  padding: 3rem;
-  margin-bottom: 3.5rem;
+/* ================= FORM CONTROLS ================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.dark-card h2 {
-  color: #ffffff;
-  font-size: 2.25rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+.form-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-900);
 }
 
-.feature-pill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
-
-.feature-pill {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--brand-200);
+  background: #ffffff;
+  font-family: var(--font-body);
   font-size: 0.925rem;
-  color: var(--brand-50);
+  color: var(--slate-900);
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--brand-600);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
 }
 
 /* ================= FOOTER ================= */

@@ -3,119 +3,314 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Services | MOONSEA ENTERPRISES PRIVATE LIMITED</title>
-  <meta name="description" content="Explore MOONSEA ENTERPRISES PRIVATE LIMITED services across pharmaceutical distribution, manufacturing, e-pharmacy digital care, and medical goods retail."/>
+  <title>Our Services | MOONSEA ENTERPRISES PRIVATE LIMITED</title>
+  <meta name="description" content="From manufacturing partnerships to healthcare distribution and digital care, Moonsea connects different stages of the healthcare ecosystem."/>
   
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              500: '#38bdf8',
-              600: '#0ea5e9',
-              700: '#0284c7',
-              800: '#0369a1',
-              900: '#0f172a',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
-<body class="antialiased bg-slate-50 text-slate-700">
+<body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="sticky top-0 z-40 border-b border-brand-100 bg-white/85 backdrop-blur-md">
-    <div class="mx-auto flex max-w-[92rem] items-center justify-between gap-1.5 px-3 py-2 md:px-4 md:py-3">
-      <a class="flex items-center gap-2 text-decoration-none" href="index.html">
-        <div class="flex items-center gap-2">
-          <span class="text-2xl font-extrabold tracking-tight text-brand-900 md:text-3xl">MOONSEA</span>
-          <span class="rounded-full bg-brand-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-700 border border-brand-200">ENT. PVT. LTD.</span>
+  <!-- ================= STICKY HEADER ================= -->
+  <header class="sticky-header">
+    <div class="container header-flex">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="MOONSEA Logo" style="height: 48px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);"/>
+        <div class="brand-title">
+          MOONSEA
+          <span class="brand-badge">ENT. PVT. LTD.</span>
         </div>
       </a>
 
-      <nav class="hidden items-center gap-5 text-sm font-medium text-slate-700 md:flex">
-        <a class="transition hover:text-brand-600" href="index.html">Home</a>
-        <a class="transition hover:text-brand-600" href="about.html">About</a>
-        <a class="transition hover:text-brand-600 font-semibold text-brand-700" href="services.html">Services</a>
-        <a class="franchise-cta inline-flex items-center gap-1.5 rounded-full bg-brand-700 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-brand-800" href="franchise.html">
-          Franchise <span class="rounded-full bg-white/20 px-1.5 py-0.5 text-[10px] font-bold tracking-[0.08em] text-white">Apply Now</span>
-        </a>
-        <a class="transition hover:text-brand-600" href="surecure.html">SURECURE</a>
-        <a class="transition hover:text-brand-600" href="why-choose-us.html">Why Us</a>
-        <a class="transition hover:text-brand-600" href="contact.html">Contact</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+          <li><a href="services.html" class="nav-link active">SERVICES</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+          <li>
+            <a href="contact.html#partnership" class="partner-cta">
+              Partner With Us <i class="fa-solid fa-handshake-angle"></i>
+            </a>
+          </li>
+        </ul>
       </nav>
+
+      <button class="hamburger" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileMenuDrawer">
+      <a href="index.html" class="nav-link">HOME</a>
+      <a href="about.html" class="nav-link">ABOUT US</a>
+      <a href="services.html" class="nav-link active">SERVICES</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="contact.html#partnership" class="partner-cta" style="justify-content:center;">Partner With Us</a>
     </div>
   </header>
 
   <!-- ================= MAIN CONTENT ================= -->
-  <main class="mx-auto max-w-[100rem] px-4 py-8 md:px-6 md:py-12">
-    <div class="space-y-12">
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero-grid">
+      <span class="hero-pill"><i class="fa-solid fa-gears"></i> Our Services</span>
+      <h1>Integrated Healthcare Solutions</h1>
+      <p>
+        From healthcare product manufacturing partnerships to distribution and digital care, Moonsea connects different stages of the healthcare ecosystem.
+      </p>
+    </section>
 
-      <section class="hero-grid relative overflow-visible rounded-3xl border border-brand-100 bg-white/80 p-8 md:p-12">
-        <p class="inline-flex rounded-full border border-brand-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">Capabilities & Services</p>
-        <h1 class="mt-4 text-4xl font-bold leading-tight text-brand-900 md:text-5xl">Comprehensive Healthcare & Distribution Services</h1>
-        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
-          MOONSEA ENTERPRISES PRIVATE LIMITED provides end-to-end services across pharmaceutical distribution, retail sale of medical & orthopaedic goods, private label manufacturing, and e-pharmacy care.
-        </p>
-      </section>
+    <!-- Service 1 — Manufacturing -->
+    <section id="manufacturing" class="glass-card" style="padding: 3rem; margin-bottom: 3.5rem;">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;" class="grid-2">
+        <div>
+          <span class="hero-pill"><i class="fa-solid fa-industry"></i> Service 01</span>
+          <h2 class="section-title">Manufacturing Partnerships</h2>
+          <h3 style="font-size: 1.25rem; color: #0284c7; margin-bottom: 1rem;">Quality Healthcare Products Through Trusted Partnerships</h3>
+          <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+            Moonsea works with qualified manufacturing partners to develop and supply healthcare products across pharmaceutical, nutraceutical, medical, orthopaedic and specialty categories.
+          </p>
 
-      <!-- Grid of Services -->
-      <section class="grid gap-6 md:grid-cols-2">
-        <article class="glass-card rounded-2xl p-8">
-          <div class="text-3xl text-brand-700 mb-4"><i class="fa-solid fa-truck-ramp-box"></i></div>
-          <h3 class="text-2xl font-bold text-brand-900">Pharmaceutical Distribution</h3>
-          <p class="mt-3 text-slate-700 leading-relaxed">Direct relationships with leading pharmaceutical companies ensuring seamless supply to hospitals, pharmacies, and healthcare institutions across India.</p>
-        </article>
+          <h4 style="font-size: 1.05rem; color: #0f172a; margin-bottom: 0.75rem;">Manufacturing Capabilities:</h4>
+          <div class="values-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 1.5rem;">
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Pharmaceutical formulations</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Nutraceutical products</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Medical products</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Orthopaedic products</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Specialty healthcare products</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Private-label products</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Contract manufacturing</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Packaging & labelling</div>
+          </div>
+        </div>
 
-        <article class="glass-card rounded-2xl p-8">
-          <div class="text-3xl text-brand-700 mb-4"><i class="fa-solid fa-pills"></i></div>
-          <h3 class="text-2xl font-bold text-brand-900">Medical & Orthopaedic Retail</h3>
-          <p class="mt-3 text-slate-700 leading-relaxed">Retail trade of prescription medicines, orthopaedic supports, surgical disposables, and personal hygiene toilet articles.</p>
-        </article>
+        <div style="border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-sm);">
+          <img src="assets/images/manufacturing_facility.png" alt="Manufacturing facility" style="width:100%; height:100%; min-height:280px; object-fit:cover;"/>
+        </div>
+      </div>
 
-        <article class="glass-card rounded-2xl p-8">
-          <div class="text-3xl text-brand-700 mb-4"><i class="fa-solid fa-industry"></i></div>
-          <h3 class="text-2xl font-bold text-brand-900">Manufacturing & Formulations</h3>
-          <p class="mt-3 text-slate-700 leading-relaxed">WHO-GMP compliant manufacturing partnership delivering quality branded formulations, nutraceuticals, and specialty care products.</p>
-        </article>
+      <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e0f2fe;">
+        <h4 style="font-size: 1rem; color: #0f172a; margin-bottom: 0.75rem;">Our Manufacturing Approach:</h4>
+        <div class="ecosystem-flow" style="padding: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;">
+          <span class="flow-label">Product Requirement</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Development</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Manufacturing</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Quality</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Packaging</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label" style="color:#0284c7;">Distribution</span>
+        </div>
+        <p style="font-size: 0.95rem; color: #64748b;">We focus on appropriate sourcing, quality processes and reliable manufacturing partnerships to support scalable healthcare product solutions.</p>
+      </div>
+    </section>
 
-        <article class="glass-card rounded-2xl p-8">
-          <div class="text-3xl text-brand-700 mb-4"><i class="fa-solid fa-laptop-medical"></i></div>
-          <h3 class="text-2xl font-bold text-brand-900">Digital Care & E-Pharmacy</h3>
-          <p class="mt-3 text-slate-700 leading-relaxed">Technology-enabled doorstep medicine delivery, digital prescription uploads, and customer care assistance.</p>
-        </article>
-      </section>
+    <!-- Service 2 — Distribution -->
+    <section id="distribution" class="glass-card" style="padding: 3rem; margin-bottom: 3.5rem;">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;" class="grid-2">
+        <div>
+          <span class="hero-pill"><i class="fa-solid fa-truck-fast"></i> Service 02</span>
+          <h2 class="section-title">Healthcare Distribution</h2>
+          <h3 style="font-size: 1.25rem; color: #0284c7; margin-bottom: 1rem;">Connecting Healthcare Products With the Right Markets</h3>
+          <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+            Moonsea is developing a healthcare distribution network designed to connect manufacturers with pharmacies, hospitals, clinics, institutions, distributors and other healthcare channels.
+          </p>
 
-    </div>
+          <h4 style="font-size: 1.05rem; color: #0f172a; margin-bottom: 0.75rem;">Distribution Channels & Services Supported:</h4>
+          <div class="values-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 1.5rem;">
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Pharmaceutical distribution</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Medical product distribution</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Nutraceutical distribution</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Pharmacy supply</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Hospital & institutional supply</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">B2B healthcare distribution</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Regional distribution partnerships</div>
+            <div style="background:#f0f9ff; padding:0.6rem 0.85rem; border-radius:0.5rem; font-size:0.875rem; font-weight:600; color:#0284c7;">Supply-chain coordination</div>
+          </div>
+        </div>
+
+        <div style="border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-sm);">
+          <img src="assets/images/distribution_logistics.png" alt="Distribution logistics" style="width:100%; height:100%; min-height:280px; object-fit:cover;"/>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e0f2fe;">
+        <h4 style="font-size: 1rem; color: #0f172a; margin-bottom: 0.75rem;">Our Supply Chain Network:</h4>
+        <div class="ecosystem-flow" style="padding: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;">
+          <span class="flow-label">Manufacturer</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label" style="color:#0284c7;">Moonsea</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Distribution</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Pharmacy / Hospital / Clinic</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label" style="color:#059669;">Patient</span>
+        </div>
+        <p style="font-size: 0.95rem; color: #64748b;">Our objective is to improve availability, efficiency and connectivity across the healthcare supply chain.</p>
+      </div>
+    </section>
+
+    <!-- Service 3 — Digital Care -->
+    <section id="digital-care" class="glass-card" style="padding: 3rem; margin-bottom: 3.5rem;">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;" class="grid-2">
+        <div>
+          <span class="hero-pill"><i class="fa-solid fa-laptop-medical"></i> Service 03</span>
+          <h2 class="section-title">Digital Care</h2>
+          <h3 style="font-size: 1.25rem; color: #0284c7; margin-bottom: 1rem;">Healthcare, Connected Digitally</h3>
+          <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+            Technology can make healthcare more accessible and convenient. Moonsea is exploring technology-enabled healthcare services that connect patients, healthcare professionals, pharmacies, diagnostics and other healthcare services.
+          </p>
+        </div>
+
+        <div style="border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-sm);">
+          <img src="assets/images/digital_care_telemedicine.png" alt="Digital care telemedicine" style="width:100%; height:100%; min-height:220px; object-fit:cover;"/>
+        </div>
+      </div>
+
+      <h4 style="font-size: 1.1rem; color: #0f172a; margin-top: 1.5rem; margin-bottom: 1rem;">Digital Care Areas:</h4>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.35rem;">Telemedicine</h4>
+          <p style="font-size: 0.9rem; color: #475569;">Digital consultations and healthcare communication.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.35rem;">E-Pharmacy</h4>
+          <p style="font-size: 0.9rem; color: #475569;">Digital discovery and ordering of healthcare products through appropriate pharmacy channels.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-truck-medical"></i></div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.35rem;">Doorstep Healthcare</h4>
+          <p style="font-size: 0.9rem; color: #475569;">Connecting patients with healthcare products and services through convenient delivery models.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.35rem;">Digital Diagnostics</h4>
+          <p style="font-size: 0.9rem; color: #475569;">Connecting patients with diagnostic services, appointments and digital reports.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e0f2fe;">
+        <h4 style="font-size: 1rem; color: #0f172a; margin-bottom: 0.75rem;">Digital Patient Journey:</h4>
+        <div class="ecosystem-flow" style="padding: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;">
+          <span class="flow-label">Consult</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Diagnose</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Access Products</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label">Receive Care</span>
+          <i class="fa-solid fa-chevron-right flow-arrow"></i>
+          <span class="flow-label" style="color:#059669;">Follow Up</span>
+        </div>
+        <p style="font-size: 0.95rem; color: #64748b;">We aim to make healthcare journeys more connected through technology.</p>
+      </div>
+    </section>
+
+    <!-- Section 5 — Who We Serve Table -->
+    <section style="margin-bottom: 3.5rem;">
+      <span class="hero-pill"><i class="fa-solid fa-users"></i> Who We Serve</span>
+      <h2 class="section-title">Supporting the Healthcare Ecosystem</h2>
+      
+      <div class="table-container">
+        <table class="serve-table">
+          <thead>
+            <tr>
+              <th>Partner / Audience</th>
+              <th>How We Help</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Patients</strong></td>
+              <td>Convenient healthcare access</td>
+            </tr>
+            <tr>
+              <td><strong>Pharmacies</strong></td>
+              <td>Product sourcing & supply</td>
+            </tr>
+            <tr>
+              <td><strong>Hospitals</strong></td>
+              <td>Institutional healthcare supplies</td>
+            </tr>
+            <tr>
+              <td><strong>Clinics</strong></td>
+              <td>Healthcare products & services</td>
+            </tr>
+            <tr>
+              <td><strong>Manufacturers</strong></td>
+              <td>Distribution & market reach</td>
+            </tr>
+            <tr>
+              <td><strong>Distributors</strong></td>
+              <td>Product & network partnerships</td>
+            </tr>
+            <tr>
+              <td><strong>Healthcare Professionals</strong></td>
+              <td>Connected healthcare services</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Services CTA Banner -->
+    <section class="glass-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 3.5rem 2rem; margin-bottom: 3.5rem;">
+      <h2 style="font-size: 2.25rem; color: #ffffff; margin-bottom: 1rem;">Let's Work Together</h2>
+      <p style="max-width: 750px; margin: 0 auto 2rem; color: #e0f2fe; font-size: 1.05rem; line-height: 1.6;">
+        Are you looking for a healthcare product, distribution partner, manufacturing partner, or digital healthcare solution?
+      </p>
+      <a href="contact.html" class="btn btn-primary" style="background: #0284c7; padding: 0.9rem 2rem; font-size: 1rem;">
+        Talk to Moonsea <i class="fa-solid fa-comments"></i>
+      </a>
+    </section>
+
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="mt-20 border-t border-brand-100 bg-white/90">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 text-sm text-slate-600 md:grid-cols-3 md:px-6">
-      <div class="space-y-2">
-        <p class="text-base font-bold text-slate-900">MOONSEA ENTERPRISES PRIVATE LIMITED</p>
-        <p class="text-xs font-semibold text-brand-700">CIN: U47721AP2024PTC116151</p>
-        <p>Registered Address: H.No.23/1182/5 Room 6, Sodhan Nagar, Nellore, AP 524003, India</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="assets/images/logo.png" alt="MOONSEA Logo" style="height: 40px; width: auto; border-radius: 6px;"/>
+            <h4 style="margin-bottom:0;">MOONSEA ENTERPRISES PRIVATE LIMITED</h4>
+          </div>
+          <p style="font-size: 0.85rem; color: #0284c7; font-weight: 700; margin-bottom: 0.5rem;">
+            Quality Products. Reliable Distribution. Digital Care.
+          </p>
+          <p>Registered Office: Nellore, Andhra Pradesh, India</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="about.html">About Us</a></p>
+          <p><a href="services.html">Services</a></p>
+          <p><a href="contact.html">Contact Us</a></p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services Breakdown</h4>
+          <p><a href="services.html#manufacturing">Manufacturing</a></p>
+          <p><a href="services.html#distribution">Distribution</a></p>
+          <p><a href="services.html#digital-care">Digital Care</a></p>
+        </div>
       </div>
-      <div class="space-y-2">
-        <p class="font-semibold text-slate-900">Quick Links</p>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
-        <p><a href="contact.html">Contact</a></p>
-      </div>
-      <div class="space-y-2">
-        <p class="font-semibold text-slate-900">SURECURE Lifesciences</p>
-        <p>Trusted Care. Assured Cure.</p>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MOONSEA ENTERPRISES PRIVATE LIMITED. All rights reserved.</p>
       </div>
     </div>
   </footer>
